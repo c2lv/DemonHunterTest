@@ -1,0 +1,8 @@
+{
+  "DEMONHUNTERTEST-OUTCAST.title": "Outcast",
+  "DEMONHUNTERTEST-OUTCAST.description": "Can only be played from the leftmost or rightmost position in hand.",
+  "DEMONHUNTERTEST-HIGHLANDER.title": "Highlander",
+  "DEMONHUNTERTEST-HIGHLANDER.description": "Can only be played when your draw pile contains no duplicate cards.",
+  "DEMONHUNTERTEST-TAUNT.title": "Taunt",
+  "DEMONHUNTERTEST-TAUNT.description": "If this card is in your hand, it must be played before other cards."
+}

@@ -1,0 +1,33 @@
+{
+    "DEMONHUNTERTEST-LOSE_ENERGY_NEXT_TURN_POWER.title": "Energy Burn",
+    "DEMONHUNTERTEST-LOSE_ENERGY_NEXT_TURN_POWER.description": "Lose energy next turn.",
+    "DEMONHUNTERTEST-LOSE_ENERGY_NEXT_TURN_POWER.smartDescription": "Lose [blue]{Amount}[/blue] energy next turn.",
+
+    "DEMONHUNTERTEST-BLADESONG_POWER.title": "Bladesong",
+    "DEMONHUNTERTEST-BLADESONG_POWER.description": "At the end of your turn, deal damage to a random enemy.",
+    "DEMONHUNTERTEST-BLADESONG_POWER.smartDescription": "At the end of your turn, deal [blue]{Amount}[/blue] damage to a random enemy.",
+
+    "DEMONHUNTERTEST-OUTCAST_TRIGGER_POWER.title": "Outcast's Fury",
+    "DEMONHUNTERTEST-OUTCAST_TRIGGER_POWER.description": "Whenever you play an [gold]Outcast[/gold] card, deal damage to all enemies.",
+    "DEMONHUNTERTEST-OUTCAST_TRIGGER_POWER.smartDescription": "Whenever you play an [gold]Outcast[/gold] card, deal [blue]{Amount}[/blue] damage to all enemies.",
+
+    "DEMONHUNTERTEST-BLUR_DEMON_HUNTER_POWER.title": "Blur",
+    "DEMONHUNTERTEST-BLUR_DEMON_HUNTER_POWER.description": "Prevent damage from [gold]Thorns[/gold].",
+    "DEMONHUNTERTEST-BLUR_DEMON_HUNTER_POWER.smartDescription": "Prevent damage from [gold]Thorns[/gold] for [blue]{Amount}[/blue] turns."
+    ,
+    "DEMONHUNTERTEST-DOUBLE_DAMAGE_THORNS_POWER.title": "Sharp Thorns",
+    "DEMONHUNTERTEST-DOUBLE_DAMAGE_THORNS_POWER.description": "Take double damage from [gold]Thorns[/gold].",
+    "DEMONHUNTERTEST-DOUBLE_DAMAGE_THORNS_POWER.smartDescription": "Take double damage from [gold]Thorns[/gold] for [blue]{Amount}[/blue] turns.",
+    "DEMONHUNTERTEST-RAZORFEN_BEASTMASTER_POWER.title": "Thorn Taming",
+    "DEMONHUNTERTEST-RAZORFEN_BEASTMASTER_POWER.description": "Whenever you deal unblocked damage with an attack this turn, decrease the target's [gold]Thorns[/gold].",
+    "DEMONHUNTERTEST-RAZORFEN_BEASTMASTER_POWER.smartDescription": "Whenever you deal unblocked damage with an attack this turn, decrease the target's [gold]Thorns[/gold] by [blue]{Amount}[/blue].",
+    "DEMONHUNTERTEST-VILEFIEND_TRAINER_POWER.title": "Weakness Taming",
+    "DEMONHUNTERTEST-VILEFIEND_TRAINER_POWER.description": "Whenever you deal unblocked damage with an attack this turn, apply [gold]Weak[/gold].",
+    "DEMONHUNTERTEST-VILEFIEND_TRAINER_POWER.smartDescription": "Whenever you deal unblocked damage with an attack this turn, apply [blue]{Amount}[/blue] [gold]Weak[/gold].",
+    "DEMONHUNTERTEST-IMPRISONMENT_POWER.title": "Imprisonment",
+    "DEMONHUNTERTEST-IMPRISONMENT_POWER.description": "This target is under Maiev's strict surveillance...",
+    "DEMONHUNTERTEST-IMPRISONMENT_POWER.smartDescription": "[gold]Stunned[/gold] for [blue]{Amount}[/blue] turns.",
+    "DEMONHUNTERTEST-THE_SKULL_OF_GULDAN_POWER.title": "The Skull of Gul'dan",
+    "DEMONHUNTERTEST-THE_SKULL_OF_GULDAN_POWER.description": "[gold]Outcast[/gold] cards cost [blue]{Amount}[/blue] less.",
+    "DEMONHUNTERTEST-THE_SKULL_OF_GULDAN_POWER.smartDescription": "[gold]Outcast[/gold] cards cost [blue]{Amount}[/blue] less."
+}

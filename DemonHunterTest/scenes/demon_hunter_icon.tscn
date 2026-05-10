@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7pq13x0cjn8m"]
+
+[ext_resource type="Texture2D" uid="uid://b28wsx3fon5ra" path="res://DemonHunterTest/images/character_icon_demonhunter.png" id="1"]
+
+[node name="DemonHunterIcon" type="TextureRect"]
+custom_minimum_size = Vector2(24, 24)
+offset_left = -18.0
+offset_top = -18.0
+offset_right = 70.0
+offset_bottom = 70.0
+texture = ExtResource("1")
+stretch_mode = 4

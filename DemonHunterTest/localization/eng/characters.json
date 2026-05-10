@@ -1,0 +1,17 @@
+{
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.aromaPrinciple": "[sine][teal]...follow the trail, then cut it off.[/teal][/sine]",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.banter.alive.endTurnPing": "...",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.banter.dead.endTurnPing": "...",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.cardsModifierDescription": "Demon Hunter Test cards will now appear in rewards and shops.",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.cardsModifierTitle": "Demon Hunter Test Cards",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.description": "A hunter trained to track down anything that moves. Brings a ruthless edge to every fight.",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.eventDeathPrevention": "Not yet. I still have work to do.",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.goldMonologue": "[sine]Good. This will buy better tools.[/sine]",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.possessiveAdjective": "their",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.pronounObject": "them",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.pronounPossessive": "theirs",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.pronounSubject": "they",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.title": "Demon Hunter",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.titleObject": "Demon Hunter",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.unlockText": "Play a single run with [teal]{Prerequisite}[/teal] to unlock this character."
+}

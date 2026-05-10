@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8m2oak3p4q5"]
+
+[ext_resource type="Texture2D" uid="uid://c3vi25ru4ilus" path="res://DemonHunterTest/images/bgillidan.png" id="1"]
+
+[node name="DemonHunterSelectBg" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1790.0
+offset_top = -1043.0
+offset_right = 1790.0
+offset_bottom = 1043.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 830.0
+offset_top = 444.0
+offset_right = -116.0
+offset_bottom = -434.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1")

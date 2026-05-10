@@ -1,0 +1,17 @@
+{
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.aromaPrinciple": "[sine][green]전쟁은 속임수다. 어둠 속에 숨어 적의 뒤를 쳐라.[/green][/sine]",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.banter.alive.endTurnPing": "이거 짜증 나는군.",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.banter.dead.endTurnPing": "...",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.cardsModifierDescription": "이제 악마사냥꾼 카드가 보상과 상점에 등장합니다.",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.cardsModifierTitle": "악마사냥꾼 카드",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.description": "첫 번째 악마사냥꾼이 된 그는 \n자부심과 분노가 넘칩니다.\n그래서 더 적성에 맞았을 지도요.",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.eventDeathPrevention": "다른 녀석들은 아직 준비가 안 됐다.",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.goldMonologue": "[sine]만년 동안 응어리질 복이로군...[/sine]",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.possessiveAdjective": "그의",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.pronounObject": "그를",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.pronounPossessive": "그의 것",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.pronounSubject": "그",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.title": "일리단 스톰레이지",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.titleObject": "일리단 스톰레이지",
+	"DEMONHUNTERTEST-DEMON_HUNTER_TEST.unlockText": "이 캐릭터를 해금하려면 [green]{Prerequisite}[/green]로 게임을 한 번 플레이하세요."
+}

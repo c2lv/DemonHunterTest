@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsck63py3vfv"]
+
+[ext_resource type="Script" uid="uid://dij7elhl4judw" path="res://DemonHunterTest/Scripts/DemonHunterTestRest.cs" id="1"]
+[ext_resource type="Texture2D" uid="uid://6hnek3erpjyu" path="res://DemonHunterTest/images/illidan_rest.png" id="2"]
+[ext_resource type="Script" uid="uid://b0b4qdovk4xj5" path="res://DemonHunterTest/Scripts/NTestSelectionReticle.cs" id="3"]
+
+[node name="DemonHunterRest" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Visuals" type="Sprite2D" parent="."]
+position = Vector2(-9, -89)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2")
+
+[node name="ControlRoot" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -18.0
+offset_top = -41.0
+offset_right = 22.0
+offset_bottom = -1.0
+
+[node name="SelectionReticle" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = -85.0
+offset_top = -131.0
+offset_right = 121.0
+offset_bottom = 67.0
+script = ExtResource("3")
+
+[node name="Hitbox" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = -107.0
+offset_top = -179.0
+offset_right = 149.0
+offset_bottom = 139.0
+pivot_offset = Vector2(157, 186.5)
+
+[node name="ThoughtBubbleRight" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 162.0
+offset_top = -139.0
+offset_right = 162.0
+offset_bottom = -139.0
+
+[node name="ThoughtBubbleLeft" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = -162.0
+offset_top = -142.0
+offset_right = -162.0
+offset_bottom = -142.0

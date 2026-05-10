@@ -1,0 +1,33 @@
+{
+    "DEMONHUNTERTEST-LOSE_ENERGY_NEXT_TURN_POWER.title": "에너지 연소",
+    "DEMONHUNTERTEST-LOSE_ENERGY_NEXT_TURN_POWER.description": "다음 턴에 에너지를 잃습니다.",
+    "DEMONHUNTERTEST-LOSE_ENERGY_NEXT_TURN_POWER.smartDescription": "다음 턴에 에너지를 [blue]{Amount}[/blue] 잃습니다.",
+
+    "DEMONHUNTERTEST-BLADESONG_POWER.title": "칼의 노래",
+    "DEMONHUNTERTEST-BLADESONG_POWER.description": "내 턴 종료 시, 무작위 적에게 피해를 줍니다.",
+    "DEMONHUNTERTEST-BLADESONG_POWER.smartDescription": "내 턴 종료 시, 무작위 적에게 피해를 [blue]{Amount}[/blue] 줍니다.",
+
+    "DEMONHUNTERTEST-OUTCAST_TRIGGER_POWER.title": "추방자의 분노",
+    "DEMONHUNTERTEST-OUTCAST_TRIGGER_POWER.description": "[gold]추방자[/gold] 카드를 사용할 때마다, 모든 적에게 피해를 줍니다.",
+    "DEMONHUNTERTEST-OUTCAST_TRIGGER_POWER.smartDescription": "[gold]추방자[/gold] 카드를 사용할 때마다, 모든 적에게 피해를 [blue]{Amount}[/blue] 줍니다.",
+
+    "DEMONHUNTERTEST-BLUR_DEMON_HUNTER_POWER.title": "흐릿해지기",
+    "DEMONHUNTERTEST-BLUR_DEMON_HUNTER_POWER.description": "[gold]가시[/gold]의 피해를 받지 않습니다.",
+    "DEMONHUNTERTEST-BLUR_DEMON_HUNTER_POWER.smartDescription": "[blue]{Amount}[/blue]턴 동안 [gold]가시[/gold]의 피해를 받지 않습니다."
+    ,
+    "DEMONHUNTERTEST-DOUBLE_DAMAGE_THORNS_POWER.title": "날카로운 가시",
+    "DEMONHUNTERTEST-DOUBLE_DAMAGE_THORNS_POWER.description": "[gold]가시[/gold]로 받는 피해가 2배가 됩니다.",
+    "DEMONHUNTERTEST-DOUBLE_DAMAGE_THORNS_POWER.smartDescription": "[blue]{Amount}[/blue]턴 동안 [gold]가시[/gold]로 받는 피해가 2배가 됩니다.",
+    "DEMONHUNTERTEST-RAZORFEN_BEASTMASTER_POWER.title": "가시 조련",
+    "DEMONHUNTERTEST-RAZORFEN_BEASTMASTER_POWER.description": "이번 턴에 공격 카드가 막히지 않은 피해를 줄 때마다 대상 적의 [gold]가시[/gold]를 감소시킵니다.",
+    "DEMONHUNTERTEST-RAZORFEN_BEASTMASTER_POWER.smartDescription": "이번 턴에 공격 카드가 막히지 않은 피해를 줄 때마다 대상 적의 [gold]가시[/gold]를 [blue]{Amount}[/blue] 감소시킵니다.",
+    "DEMONHUNTERTEST-VILEFIEND_TRAINER_POWER.title": "약화 조련",
+    "DEMONHUNTERTEST-VILEFIEND_TRAINER_POWER.description": "이번 턴에 공격 카드가 막히지 않은 피해를 줄 때마다 [gold]약화[/gold]를 부여합니다.",
+    "DEMONHUNTERTEST-VILEFIEND_TRAINER_POWER.smartDescription": "이번 턴에 공격 카드가 막히지 않은 피해를 줄 때마다 [gold]약화[/gold]를 [blue]{Amount}[/blue] 부여합니다.",
+    "DEMONHUNTERTEST-IMPRISONMENT_POWER.title": "투옥",
+    "DEMONHUNTERTEST-IMPRISONMENT_POWER.description": "이 대상은 마이에브의 철저한 감시 하에 있습니다...",
+    "DEMONHUNTERTEST-IMPRISONMENT_POWER.smartDescription": "[blue]{Amount}[/blue]턴 동안 [gold]기절[/gold]합니다.",
+    "DEMONHUNTERTEST-THE_SKULL_OF_GULDAN_POWER.title": "굴단의 해골",
+    "DEMONHUNTERTEST-THE_SKULL_OF_GULDAN_POWER.description": "[gold]추방자[/gold] 카드의 비용이 [blue]{Amount}[/blue] 감소합니다.",
+    "DEMONHUNTERTEST-THE_SKULL_OF_GULDAN_POWER.smartDescription": "[gold]추방자[/gold] 카드의 비용이 [blue]{Amount}[/blue] 감소합니다."
+}

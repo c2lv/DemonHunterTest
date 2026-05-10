@@ -1,0 +1,18 @@
+{
+	"THE_ARCHITECT.talk.DEMONHUNTERTEST-DEMON_HUNTER_TEST.0-0r.char": "An ominous aura approaches.",
+	"THE_ARCHITECT.talk.DEMONHUNTERTEST-DEMON_HUNTER_TEST.0-0r.next": "Continue",
+	"THE_ARCHITECT.talk.DEMONHUNTERTEST-DEMON_HUNTER_TEST.0-1r.ancient": "Who are you?",
+	"THE_ARCHITECT.talk.DEMONHUNTERTEST-DEMON_HUNTER_TEST.0-attack": "Battle",
+
+	"THE_ARCHITECT.talk.DEMONHUNTERTEST-DEMON_HUNTER_TEST.1-0r.ancient": "You don't seem bored either.",
+	"THE_ARCHITECT.talk.DEMONHUNTERTEST-DEMON_HUNTER_TEST.1-0r.next": "Continue",
+	"THE_ARCHITECT.talk.DEMONHUNTERTEST-DEMON_HUNTER_TEST.1-1r.char": "Revenge is mine!",
+	"THE_ARCHITECT.talk.DEMONHUNTERTEST-DEMON_HUNTER_TEST.1-1r.next": "Continue",
+	"THE_ARCHITECT.talk.DEMONHUNTERTEST-DEMON_HUNTER_TEST.1-2r.ancient": "If you say so.",
+
+	"THE_ARCHITECT.talk.DEMONHUNTERTEST-DEMON_HUNTER_TEST.2-0r.ancient": "Return to where you came from.",
+	"THE_ARCHITECT.talk.DEMONHUNTERTEST-DEMON_HUNTER_TEST.2-0r.next": "Continue",
+	"THE_ARCHITECT.talk.DEMONHUNTERTEST-DEMON_HUNTER_TEST.2-1r.char": "I was abandoned by the place I sought to protect.",
+	"THE_ARCHITECT.talk.DEMONHUNTERTEST-DEMON_HUNTER_TEST.2-1r.next": "Continue",
+	"THE_ARCHITECT.talk.DEMONHUNTERTEST-DEMON_HUNTER_TEST.2-2r.ancient": "I'm glad I'm not you."
+}

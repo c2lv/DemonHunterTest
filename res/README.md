@@ -25,13 +25,13 @@
 4. **(선택)** 기본적으로 MOD가 적용된 세이브 파일은 그렇지 않은 파일과 별도로 저장됩니다. 이를 통합해주는 [UnifiedSavePath](https://www.nexusmods.com/slaythespire2/mods/6)도 mods/ 폴더에 압축 해제하여 사용하기를 권장합니다.
 
 ## 인게임 스크린샷
-![character_choice](res/screenshot_1.png)
-![card_choice](res/screenshot_2.png)
-![in_combat](res/screenshot_3.png)
-![rest](res/screenshot_4.png)
-![card_library](res/screenshot_5.png)
-![potions](res/screenshot_6.png)
-![relics](res/screenshot_7.png)
+![character_choice](screenshot_1.png)
+![card_choice](screenshot_2.png)
+![in_combat](screenshot_3.png)
+![rest](screenshot_4.png)
+![card_library](screenshot_5.png)
+![potions](screenshot_6.png)
+![relics](screenshot_7.png)
 
 ## 버그/오류 제보
 아직 부족한 점이 많습니다. pull request 혹은 issue로 부탁드립니다.

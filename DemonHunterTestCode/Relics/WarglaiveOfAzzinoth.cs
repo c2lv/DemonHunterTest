@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using DemonHunterTest.DemonHunterTestCode.Character;
 
@@ -32,7 +34,7 @@ public sealed class WarglaiveOfAzzinoth : DemonHunterTestRelic
         HoverTipFactory.FromPower<RegenPower>()
     };
 
-    public override async Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+    public override async Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
     {
         if (side == base.Owner.Creature.Side)
         {
@@ -47,11 +49,11 @@ public sealed class WarglaiveOfAzzinoth : DemonHunterTestRelic
                 IEnumerable<Creature> targets = from c in combatState.GetOpponentsOf(base.Owner.Creature)
                                                 where c.IsAlive
                                                 select c;
-                await PowerCmd.Apply<ThornsPower>(targets, base.DynamicVars["ThornsPower"].BaseValue, null, null);
+                await PowerCmd.Apply<ThornsPower>(new ThrowingPlayerChoiceContext(), targets, base.DynamicVars["ThornsPower"].BaseValue, null, null);
             }
             
             // Regen은 항상 자신에게 적용
-            await PowerCmd.Apply<RegenPower>(base.Owner.Creature, base.DynamicVars["RegenPower"].BaseValue, base.Owner.Creature, null);
+            await PowerCmd.Apply<RegenPower>(new ThrowingPlayerChoiceContext(), base.Owner.Creature, base.DynamicVars["RegenPower"].BaseValue, base.Owner.Creature, null);
         }
     }
 }

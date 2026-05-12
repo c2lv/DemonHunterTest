@@ -32,7 +32,10 @@ public sealed class ManaBurn : DemonHunterTestCard
 	{
 		await CreatureCmd.TriggerAnim(base.Owner.Creature, "Cast", base.Owner.Character.CastAnimDelay);
 		await PlayerCmd.GainEnergy(base.DynamicVars.Energy.IntValue, base.Owner);
-		await PowerCmd.Apply<LoseEnergyNextTurnPower>(base.Owner.Creature, base.DynamicVars["LoseEnergyNextTurnPower"].IntValue, base.Owner.Creature, this);
+		if (base.Owner != null && base.Owner.Creature != null)
+		{
+			await PowerCmd.Apply<LoseEnergyNextTurnPower>(choiceContext, base.Owner.Creature, base.DynamicVars["LoseEnergyNextTurnPower"].IntValue, base.Owner.Creature, this);
+		}
     }
 	protected override void OnUpgrade()
 	{

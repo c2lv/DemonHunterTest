@@ -15,6 +15,7 @@ using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using DemonHunterTest.DemonHunterTestCode.Character;
 using DemonHunterTest.DemonHunterTestCode.Extensions;
 using DemonHunterTest.DemonHunterTestCode.Cards;
@@ -42,7 +43,7 @@ public sealed class WarglaivesOfAzzinoth : DemonHunterTestRelic
         HoverTipFactory.FromPower<StrengthPower>()
     };
 
-    public override async Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+    public override async Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
     {
         if (side == base.Owner.Creature.Side)
         {
@@ -57,12 +58,12 @@ public sealed class WarglaivesOfAzzinoth : DemonHunterTestRelic
                 IEnumerable<Creature> targets = from c in combatState.GetOpponentsOf(base.Owner.Creature)
                                                 where c.IsAlive
                                                 select c;
-                await PowerCmd.Apply<ThornsPower>(targets, base.DynamicVars["ThornsPower"].BaseValue, null, null);
+                await PowerCmd.Apply<ThornsPower>(new ThrowingPlayerChoiceContext(), targets, base.DynamicVars["ThornsPower"].BaseValue, null, null);
             }
             
             // Regen과 Strength는 항상 자신에게 적용
-            await PowerCmd.Apply<RegenPower>(base.Owner.Creature, base.DynamicVars["RegenPower"].BaseValue, base.Owner.Creature, null);
-            await PowerCmd.Apply<StrengthPower>(base.Owner.Creature, base.DynamicVars["StrengthPower"].BaseValue, base.Owner.Creature, null);
+            await PowerCmd.Apply<RegenPower>(new ThrowingPlayerChoiceContext(), base.Owner.Creature, base.DynamicVars["RegenPower"].BaseValue, base.Owner.Creature, null);
+            await PowerCmd.Apply<StrengthPower>(new ThrowingPlayerChoiceContext(), base.Owner.Creature, base.DynamicVars["StrengthPower"].BaseValue, base.Owner.Creature, null);
         }
     }
 }

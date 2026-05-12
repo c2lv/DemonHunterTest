@@ -36,10 +36,11 @@ public sealed class AltruisTheOutcast : DemonHunterTestCard
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{
-		CombatState? combatState = base.CombatState;
+		ICombatState? combatState = base.CombatState;
 		ArgumentNullException.ThrowIfNull(combatState);
 		await CreatureCmd.TriggerAnim(base.Owner.Creature, "Cast", base.Owner.Character.CastAnimDelay);
 		await PowerCmd.Apply<OutcastTriggerPower>(
+			choiceContext,
 			base.Owner.Creature,
 			base.DynamicVars["Damage"].BaseValue,
 			base.Owner.Creature,

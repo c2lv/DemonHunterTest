@@ -34,11 +34,13 @@ public sealed class CoordinatedStrike : DemonHunterTestCard
 		await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
 			.WithHitFx("vfx/vfx_attack_slash")
 			.Execute(choiceContext);
-		CombatState combatState = base.CombatState ?? throw new InvalidOperationException("Combat state is required to create Illidari cards.");
+		ICombatState? tempCombatState = base.CombatState;
+		if (tempCombatState == null) throw new InvalidOperationException("Combat state is required to create Illidari cards.");
+		CombatState combatState = (CombatState)tempCombatState;
 		List<Illidari> illidariCards = Illidari.Create(base.Owner, 3, combatState).ToList();
-		CardPileAddResult drawResult = await CardPileCmd.AddGeneratedCardToCombat(illidariCards[0], PileType.Draw, addedByPlayer: true, CardPilePosition.Random);
-		CardPileAddResult discardResult = await CardPileCmd.AddGeneratedCardToCombat(illidariCards[1], PileType.Discard, addedByPlayer: true);
-		await CardPileCmd.AddGeneratedCardToCombat(illidariCards[2], PileType.Hand, addedByPlayer: true);
+		CardPileAddResult drawResult = await CardPileCmd.AddGeneratedCardToCombat(illidariCards[0], PileType.Draw, null, CardPilePosition.Random);
+		CardPileAddResult discardResult = await CardPileCmd.AddGeneratedCardToCombat(illidariCards[1], PileType.Discard, null);
+		await CardPileCmd.AddGeneratedCardToCombat(illidariCards[2], PileType.Hand, null);
 		CardCmd.PreviewCardPileAdd(new List<CardPileAddResult> { drawResult, discardResult });
 	}
 

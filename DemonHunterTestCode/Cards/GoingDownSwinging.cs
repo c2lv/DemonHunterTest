@@ -41,7 +41,9 @@ public sealed class GoingDownSwinging : DemonHunterTestCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        CombatState combatState = base.CombatState ?? throw new InvalidOperationException("Combat state is required to apply buffs.");
+        ICombatState? tempCombatState = base.CombatState;
+        if (tempCombatState == null) throw new InvalidOperationException("Combat state is required to apply buffs.");
+        CombatState combatState = (CombatState)tempCombatState;
         ArgumentNullException.ThrowIfNull(base.Owner);
 
         foreach (Creature creature in combatState.GetTeammatesOf(base.Owner.Creature))
@@ -51,8 +53,8 @@ public sealed class GoingDownSwinging : DemonHunterTestCard
                 continue;
             }
 
-            await PowerCmd.Apply<StrengthPower>(creature, base.DynamicVars["StrengthPower"].BaseValue, base.Owner.Creature, this);
-            await PowerCmd.Apply<IntangiblePower>(creature, base.DynamicVars["IntangiblePower"].BaseValue, base.Owner.Creature, this);
+            await PowerCmd.Apply<StrengthPower>(choiceContext, creature, base.DynamicVars["StrengthPower"].BaseValue, base.Owner.Creature, this);
+            await PowerCmd.Apply<IntangiblePower>(choiceContext, creature, base.DynamicVars["IntangiblePower"].BaseValue, base.Owner.Creature, this);
         }
     }
 

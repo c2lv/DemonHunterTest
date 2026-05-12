@@ -29,9 +29,10 @@ public sealed class PriestessOfFury : DemonHunterTestCard
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{
-		CombatState? combatState = base.CombatState;
+		ICombatState? combatState = base.CombatState;
 		ArgumentNullException.ThrowIfNull(combatState);
 		await PowerCmd.Apply<BladesongPower>(
+			choiceContext,
 			base.Owner.Creature,
 			base.DynamicVars["Deal"].BaseValue,
 			base.Owner.Creature,

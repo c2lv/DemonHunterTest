@@ -34,7 +34,7 @@ public sealed class BlurDemonHunter : DemonHunterTestCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.TriggerAnim(base.Owner.Creature, "Cast", base.Owner.Character.CastAnimDelay);
-        await PowerCmd.Apply<BlurDemonHunterPower>(base.Owner.Creature, base.DynamicVars["BlurDemonHunterPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<BlurDemonHunterPower>(choiceContext, base.Owner.Creature, base.DynamicVars["BlurDemonHunterPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

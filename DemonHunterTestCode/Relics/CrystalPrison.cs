@@ -3,6 +3,7 @@ using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Relics;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using DemonHunterTest.DemonHunterTestCode.Powers;
 using DemonHunterTest.DemonHunterTestCode.Character;
 using BaseLib.Utils;
@@ -16,7 +17,7 @@ public sealed class CrystalPrison : DemonHunterTestRelic
 
     public override async Task BeforeCombatStart()
     {
-        CombatState? combatState = base.Owner?.Creature.CombatState;
+        ICombatState? combatState = base.Owner?.Creature.CombatState;
         if (combatState != null && base.Owner != null)
         {
             Flash();
@@ -24,7 +25,7 @@ public sealed class CrystalPrison : DemonHunterTestRelic
             {
                 if (enemy.IsAlive)
                 {
-                    await PowerCmd.Apply<ImprisonmentPower>(new[] { enemy }, 2, base.Owner.Creature, null);
+                    await PowerCmd.Apply<ImprisonmentPower>(new ThrowingPlayerChoiceContext(), new[] { enemy }, 2, base.Owner.Creature, null);
                 }
             }
         }

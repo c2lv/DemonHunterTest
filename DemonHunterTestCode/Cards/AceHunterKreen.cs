@@ -28,12 +28,16 @@ public sealed class AceHunterKreen : DemonHunterTestCard
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{
-		CombatState? combatState = base.CombatState;
+		ICombatState? combatState = base.CombatState;
 		ArgumentNullException.ThrowIfNull(combatState);
 		await CreatureCmd.TriggerAnim(base.Owner.Creature, "Cast", base.Owner.Character.CastAnimDelay);
 		foreach (Creature enemy in combatState.HittableEnemies)
 		{
-			await PowerCmd.SetAmount<ThornsPower>(enemy, 0m, base.Owner.Creature, this);
+			var thornsPower = enemy.GetPower<ThornsPower>();
+			if (thornsPower != null)
+			{
+				await PowerCmd.ModifyAmount(choiceContext, thornsPower, -thornsPower.Amount, base.Owner.Creature, this);
+			}
 		}
 	}
 

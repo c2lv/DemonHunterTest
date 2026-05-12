@@ -24,7 +24,7 @@ public sealed class VilefiendTrainerPower : DemonHunterTestPower
         }
 
         Flash();
-        await PowerCmd.Apply<WeakPower>(target, base.Amount, base.Owner, cardSource);
+        await PowerCmd.Apply<WeakPower>(new ThrowingPlayerChoiceContext(), target, base.Amount, base.Owner, cardSource);
     }
 
     public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)

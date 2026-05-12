@@ -12,7 +12,7 @@ public sealed class ImprisonmentPower : DemonHunterTestPower
 
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    public override async Task BeforeSideTurnStart(PlayerChoiceContext choiceContext, CombatSide side, CombatState combatState)
+    public override async Task BeforeSideTurnStart(PlayerChoiceContext choiceContext, CombatSide side, ICombatState combatState)
     {
         if (side == Owner.Side && !Owner.IsDead)
         {

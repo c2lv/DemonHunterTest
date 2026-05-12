@@ -32,12 +32,12 @@ public sealed class MetamorphosisDH : DemonHunterTestCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        CombatState? combatState = base.CombatState;
+        ICombatState? combatState = base.CombatState;
         if (combatState == null) return;
 
         // Apply DoubleDamagePower to self for 2 turns (doubles attack card damage)
-        await PowerCmd.Apply<DoubleDamagePower>(base.Owner.Creature, base.DynamicVars["Turn"].BaseValue, base.Owner.Creature, this);
-        await PowerCmd.Apply<DoubleDamageThornsPower>(base.Owner.Creature, base.DynamicVars["Turn"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<DoubleDamagePower>(choiceContext, base.Owner.Creature, base.DynamicVars["Turn"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<DoubleDamageThornsPower>(choiceContext, base.Owner.Creature, base.DynamicVars["Turn"].BaseValue, base.Owner.Creature, this);
     }
     protected override void OnUpgrade()
     {

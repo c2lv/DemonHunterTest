@@ -36,7 +36,7 @@ public sealed class TheSkullOfGuldan : DemonHunterTestCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<TheSkullOfGuldanPower>(base.Owner.Creature, base.DynamicVars["Cost"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<TheSkullOfGuldanPower>(choiceContext, base.Owner.Creature, base.DynamicVars["Cost"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

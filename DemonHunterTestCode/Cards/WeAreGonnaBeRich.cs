@@ -38,7 +38,9 @@ public sealed class WeAreGonnaBeRich : DemonHunterTestCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        CombatState combatState = base.CombatState ?? throw new InvalidOperationException("Combat state is required to create Reno Jackson cards.");
+        ICombatState? tempCombatState = base.CombatState;
+        if (tempCombatState == null) throw new InvalidOperationException("Combat state is required to create Reno Jackson cards.");
+        CombatState combatState = (CombatState)tempCombatState;
         ArgumentNullException.ThrowIfNull(base.Owner);
 
         int cardsToAdd = base.DynamicVars.Cards.IntValue;
@@ -66,7 +68,11 @@ public sealed class WeAreGonnaBeRich : DemonHunterTestCard
             return;
         }
 
-        await CardPileCmd.AddGeneratedCardsToCombat(generatedCards, PileType.Draw, addedByPlayer: true, CardPilePosition.Random);
+        // Add all cards one by one
+        foreach(CardModel card in generatedCards)
+        {
+            await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Draw, null, CardPilePosition.Random);
+        }
     }
 
     protected override void OnUpgrade()

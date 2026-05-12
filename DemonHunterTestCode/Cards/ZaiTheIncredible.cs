@@ -33,7 +33,7 @@ public sealed class ZaiTheIncredible : DemonHunterTestCard
 
         // 맨 왼쪽 카드 복사 및 추가
         CardModel leftClone = leftmost.CreateClone();
-        await CardPileCmd.AddGeneratedCardToCombat(leftClone, PileType.Hand, true, CardPilePosition.Top);
+        await CardPileCmd.AddGeneratedCardToCombat(leftClone, PileType.Hand, null, CardPilePosition.Top);
 
         // 맨 오른쪽 카드 복사 및 추가
         // 카드가 추가됨에 따라 인덱스가 변하므로 다시 식별하거나 위치를 계산해야 할 수 있습니다.
@@ -44,7 +44,7 @@ public sealed class ZaiTheIncredible : DemonHunterTestCard
         // 맨 오른쪽 카드의 복사본을 맨 오른쪽(Bottom)에 추가하면 원본의 오른쪽이 됩니다.
         // 원본의 왼쪽에 추가하려면 인덱스를 조절해야 하지만, 현재 명령 구조상 Top/Bottom/Random만 지원합니다.
         // 여기서는 일반적인 추가 방식을 사용하되, 나중에 필요시 인덱스 기반 추가를 검토합니다.
-        await CardPileCmd.AddGeneratedCardToCombat(rightClone, PileType.Hand, true, CardPilePosition.Bottom);
+        await CardPileCmd.AddGeneratedCardToCombat(rightClone, PileType.Hand, null, CardPilePosition.Bottom);
     }
 
     protected override void OnUpgrade()

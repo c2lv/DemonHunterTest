@@ -36,7 +36,7 @@ public sealed class Battlefiend : DemonHunterTestCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
-        CombatState? combatState = base.CombatState;
+        ICombatState? combatState = base.CombatState;
         ArgumentNullException.ThrowIfNull(combatState);
         // Deal damage
         await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
@@ -46,7 +46,7 @@ public sealed class Battlefiend : DemonHunterTestCard
         // Create a copy with increased damage and add to discard pile (Severance-style)
         Battlefiend copy = combatState.CreateCard<Battlefiend>(base.Owner);
         copy.DynamicVars.Damage.BaseValue += base.DynamicVars["Increase"].BaseValue;
-        CardPileAddResult discardResult = await CardPileCmd.AddGeneratedCardToCombat(copy, PileType.Discard, addedByPlayer: true);
+        CardPileAddResult discardResult = await CardPileCmd.AddGeneratedCardToCombat(copy, PileType.Discard, base.Owner);
         CardCmd.PreviewCardPileAdd(new[] { discardResult });
     }
 

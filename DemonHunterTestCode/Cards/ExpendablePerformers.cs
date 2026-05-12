@@ -47,7 +47,9 @@ public sealed class ExpendablePerformers : DemonHunterTestCard
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{
-		CombatState combatState = base.CombatState ?? throw new InvalidOperationException("Combat state is required to create Illidari cards.");
+		ICombatState? tempCombatState = base.CombatState;
+		if (tempCombatState == null) throw new InvalidOperationException("Combat state is required to create Illidari cards.");
+		CombatState combatState = (CombatState)tempCombatState;
 		ArgumentNullException.ThrowIfNull(base.Owner);
 		ArgumentNullException.ThrowIfNull(base.Owner.PlayerCombatState);
 
@@ -72,7 +74,7 @@ public sealed class ExpendablePerformers : DemonHunterTestCard
 			CardPileAddResult result = await CardPileCmd.AddGeneratedCardToCombat(
 				card,
 				PileType.Hand,
-				addedByPlayer: true
+				null
 			);
 			results.Add(result);
 		}

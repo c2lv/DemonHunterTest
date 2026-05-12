@@ -30,9 +30,14 @@ public sealed class RazorfenBeastmasterPower : DemonHunterTestPower
         }
 
         Flash();
-        decimal currentThorns = target.GetPowerAmount<ThornsPower>();
-        decimal reducedThorns = Math.Max(0m, currentThorns - base.Amount);
-        await PowerCmd.SetAmount<ThornsPower>(target, reducedThorns, base.Owner, cardSource);
+        var thornsPower = target.GetPower<ThornsPower>();
+        if (thornsPower != null)
+        {
+            decimal currentThorns = thornsPower.Amount;
+            decimal reducedThorns = Math.Max(0m, currentThorns - base.Amount);
+            decimal delta = reducedThorns - currentThorns;
+            await PowerCmd.ModifyAmount(new ThrowingPlayerChoiceContext(), thornsPower, (int)delta, base.Owner, cardSource);
+        }
     }
 
     public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)

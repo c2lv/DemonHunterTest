@@ -38,8 +38,7 @@ public sealed class SnakeEyesDH : DemonHunterTestCard
         {
             return;
         }
-
-        base.DynamicVars.Energy.BaseValue = Rng.Chaotic.NextInt(6) + 1;
+        base.DynamicVars.Energy.BaseValue = Owner.RunState.Rng.CombatEnergyCosts.NextInt(6) + 1;
         NCard.FindOnTable(this)?.UpdateVisuals(Pile?.Type ?? PileType.Hand, CardPreviewMode.Normal);
     }
 

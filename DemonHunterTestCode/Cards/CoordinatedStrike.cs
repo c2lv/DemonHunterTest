@@ -18,8 +18,6 @@ namespace DemonHunterTestCode.Cards;
 [Pool(typeof(DemonHunterTestCardPool))]
 public sealed class CoordinatedStrike : DemonHunterTestCard
 {
-	protected override HashSet<CardTag> CanonicalTags => new HashSet<CardTag> { CardTag.Strike };
-
 	protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(8m, ValueProp.Move),
     ];

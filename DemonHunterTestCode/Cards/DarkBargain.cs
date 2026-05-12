@@ -46,7 +46,13 @@ public sealed class DarkBargain : DemonHunterTestCard
             return;
         }
 
-        foreach (CardModel item in await CardSelectCmd.FromHand(prefs: new CardSelectorPrefs(CardSelectorPrefs.ExhaustSelectionPrompt, 0, base.DynamicVars.Cards.IntValue), context: choiceContext, player: base.Owner, filter: null, source: this))
+        foreach (CardModel item in await CardSelectCmd.FromHand(
+            context: choiceContext, 
+            player: base.Owner, 
+            prefs: new CardSelectorPrefs(CardSelectorPrefs.ExhaustSelectionPrompt, base.DynamicVars.Cards.IntValue), 
+            filter: null, 
+            source: this
+        ))
         {
             await CardCmd.Exhaust(choiceContext, item);
         }

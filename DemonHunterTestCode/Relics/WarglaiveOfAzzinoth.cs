@@ -36,11 +36,21 @@ public sealed class WarglaiveOfAzzinoth : DemonHunterTestRelic
     {
         if (side == base.Owner.Creature.Side)
         {
-            Flash();
-            IEnumerable<Creature> targets = from c in combatState.GetOpponentsOf(base.Owner.Creature)
-                                            where c.IsAlive
-                                            select c;
-            await PowerCmd.Apply<ThornsPower>(targets, base.DynamicVars["ThornsPower"].BaseValue, null, null);
+            // 같은 팀에서 같은 캐릭터(일리단)를 가진 살아있는 플레이어 찾기
+            var allyWithSameCharacter = combatState.Players
+                .FirstOrDefault(p => p.Creature.Side == side && p.Creature.IsAlive && p.Character.Id == base.Owner.Character.Id);
+
+            // 첫 번째 일리단만 가시 적용 (중복 방지)
+            if (allyWithSameCharacter == base.Owner)
+            {
+                Flash();
+                IEnumerable<Creature> targets = from c in combatState.GetOpponentsOf(base.Owner.Creature)
+                                                where c.IsAlive
+                                                select c;
+                await PowerCmd.Apply<ThornsPower>(targets, base.DynamicVars["ThornsPower"].BaseValue, null, null);
+            }
+            
+            // Regen은 항상 자신에게 적용
             await PowerCmd.Apply<RegenPower>(base.Owner.Creature, base.DynamicVars["RegenPower"].BaseValue, base.Owner.Creature, null);
         }
     }

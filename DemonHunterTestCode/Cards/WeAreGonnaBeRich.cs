@@ -19,6 +19,8 @@ namespace DemonHunterTestCode.Cards;
 [Pool(typeof(DemonHunterTestCardPool))]
 public sealed class WeAreGonnaBeRich : DemonHunterTestCard
 {
+    public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
+
     protected override IEnumerable<DynamicVar> CanonicalVars => new List<DynamicVar>
     {
         new CardsVar(1)

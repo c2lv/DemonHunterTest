@@ -23,7 +23,7 @@ public sealed class RenoJackson() : DemonHunterTestCard(
 
     protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[1]
     {
-        new HpLossVar(10m),
+        new HpLossVar(15m),
     };
 
     protected override bool IsPlayable => IsHighlander;
@@ -51,6 +51,6 @@ public sealed class RenoJackson() : DemonHunterTestCard(
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars["HpLoss"].UpgradeValueBy(5m);
+        base.DynamicVars["HpLoss"].UpgradeValueBy(-5m);
     }
 }

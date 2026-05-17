@@ -26,7 +26,7 @@ public sealed class RazorfenBeastmaster : DemonHunterTestCard
     };
 
     public RazorfenBeastmaster()
-        : base(1, CardType.Skill, CardRarity.Common, TargetType.AnyEnemy)
+        : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
     }
 

@@ -38,7 +38,7 @@ public sealed class SightlessWatcher : DemonHunterTestCard
 		}
 		foreach (CardModel card in cardsToChooseFrom)
 		{
-			if (card.Id == cardModel.Id)
+			if (ReferenceEquals(card, cardModel))
 			{
 				await CardPileCmd.Add(card, PileType.Hand);
 			}

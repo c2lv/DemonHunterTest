@@ -31,7 +31,7 @@ public sealed class MarkOfTheIllidari : DemonHunterTestRelic
         {
             if (!IsActivating)
             {
-                return OutcastPlayed % base.DynamicVars.Cards.IntValue;
+                return DemonHunterTest_OutcastPlayed % base.DynamicVars.Cards.IntValue;
             }
             return base.DynamicVars.Cards.IntValue;
         }
@@ -64,7 +64,7 @@ public sealed class MarkOfTheIllidari : DemonHunterTestRelic
     }
 
     [SavedProperty]
-    public int OutcastPlayed
+    public int DemonHunterTest_OutcastPlayed
     {
         get => _outcastPlayed;
         set
@@ -84,7 +84,7 @@ public sealed class MarkOfTheIllidari : DemonHunterTestRelic
         else
         {
             int intValue = base.DynamicVars.Cards.IntValue;
-            base.Status = ((OutcastPlayed % intValue == intValue - 1) ? RelicStatus.Active : RelicStatus.Normal);
+            base.Status = ((DemonHunterTest_OutcastPlayed % intValue == intValue - 1) ? RelicStatus.Active : RelicStatus.Normal);
         }
         InvokeDisplayAmountChanged();
     }
@@ -93,9 +93,9 @@ public sealed class MarkOfTheIllidari : DemonHunterTestRelic
     {
         if (cardPlay.Card.Owner == base.Owner && cardPlay.Card.Keywords.Contains(DHKeyWords.Outcast))
         {
-            OutcastPlayed++;
+            DemonHunterTest_OutcastPlayed++;
             int intValue = base.DynamicVars.Cards.IntValue;
-            if (CombatManager.Instance.IsInProgress && OutcastPlayed % intValue == 0)
+            if (CombatManager.Instance.IsInProgress && DemonHunterTest_OutcastPlayed % intValue == 0)
             {
                 await TaskHelper.RunSafely(DoActivateVisuals());
                 await PlayerCmd.GainEnergy(base.DynamicVars.Energy.BaseValue, base.Owner);

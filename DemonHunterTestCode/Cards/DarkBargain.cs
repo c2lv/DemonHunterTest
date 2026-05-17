@@ -33,19 +33,6 @@ public sealed class DarkBargain : DemonHunterTestCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        // Select separately from Hand and Draw piles
-        var handPile = PileType.Hand.GetPile(base.Owner);
-        var drawPile = PileType.Draw.GetPile(base.Owner);
-        int perPileAmount = base.DynamicVars.Cards.IntValue;
-
-        int handAmount = Math.Min(perPileAmount, handPile.Cards.Count);
-        int drawAmount = Math.Min(perPileAmount, drawPile.Cards.Count);
-
-        if (handAmount <= 0 && drawAmount <= 0)
-        {
-            return;
-        }
-
         foreach (CardModel item in await CardSelectCmd.FromHand(
             context: choiceContext, 
             player: base.Owner, 
@@ -56,10 +43,20 @@ public sealed class DarkBargain : DemonHunterTestCard
         {
             await CardCmd.Exhaust(choiceContext, item);
         }
-        foreach (CardModel card in await CardSelectCmd.FromSimpleGrid(choiceContext, drawPile.Cards, base.Owner, new CardSelectorPrefs(base.SelectionScreenPrompt, drawAmount)))
-        {
-            await CardCmd.Exhaust(choiceContext, card);
-        }
+
+        List<CardModel> cardsIn = (from c in PileType.Draw.GetPile(base.Owner).Cards
+			orderby c.Rarity, c.Id
+			select c).ToList();
+		CardModel? cardModel = (await CardSelectCmd.FromSimpleGrid(
+            choiceContext, 
+            cardsIn, 
+            base.Owner, 
+            new CardSelectorPrefs(base.SelectionScreenPrompt, base.DynamicVars.Cards.IntValue)
+            )).FirstOrDefault();
+		if (cardModel != null)
+		{
+			await CardCmd.Exhaust(choiceContext, cardModel);
+		}
     }
 
     protected override void OnUpgrade()

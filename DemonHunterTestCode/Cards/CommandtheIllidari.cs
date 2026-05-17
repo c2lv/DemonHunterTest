@@ -57,12 +57,18 @@ public sealed class CommandTheIllidari : DemonHunterTestCard
         }
     }
 
-    private static bool MatchesIllidari(CardModel card)
+    private bool MatchesIllidari(CardModel card)
     {
         if (card == null)
         {
             return false;
         }
+
+        if (string.Equals(card.Id.Entry, Id.Entry, StringComparison.OrdinalIgnoreCase))
+        {
+            return false;
+        }
+
         try
         {
             if (card.Id.Entry.Contains("Illidari", StringComparison.OrdinalIgnoreCase))

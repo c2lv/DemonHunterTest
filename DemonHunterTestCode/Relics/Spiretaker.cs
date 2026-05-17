@@ -3,9 +3,7 @@ using System.Threading.Tasks;
 using BaseLib.Utils;
 using DemonHunterTest.DemonHunterTestCode.Audio;
 using DemonHunterTest.DemonHunterTestCode.Character;
-using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Relics;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Rooms;
 using MegaCrit.Sts2.Core.Runs;
 
@@ -37,7 +35,7 @@ public sealed class Spiretaker : DemonHunterTestRelic
 
     public override Task AfterCombatEnd(CombatRoom room)
     {
-        CombatBgmController.RestoreDefaultMusic();
+        BgmController.Stop();
         return Task.CompletedTask;
     }
 
@@ -48,13 +46,20 @@ public sealed class Spiretaker : DemonHunterTestRelic
         {
             return;
         }
-        // Only apply music for combat rooms, not other room types
         if (!(runState.CurrentRoom is CombatRoom))
         {
+            BgmController.Stop();
             return;
         }
         RoomType roomType = runState.CurrentRoom.RoomType;
         Flash();
-        CombatBgmController.PlayForRoom(roomType, EnemyBgmPath, EliteBgmPath, BossBgmPath);
+        if (roomType == RoomType.Monster || roomType == RoomType.Elite || roomType == RoomType.Boss)
+        {
+            BgmController.PlayForRoom(roomType, EnemyBgmPath, EliteBgmPath, BossBgmPath);
+        }
+        else
+        {
+            BgmController.Stop();
+        }
     }
 }

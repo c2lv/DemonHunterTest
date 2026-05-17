@@ -14,7 +14,6 @@ namespace DemonHunterTest.DemonHunterTestCode.Relics
     {
         private bool _isShopMusicActive;
 
-        // Use Common rarity to avoid core shop-special handling that pollutes map/history
         public override RelicRarity Rarity => RelicRarity.Shop;
 
         public override async Task AfterObtained()
@@ -32,13 +31,9 @@ namespace DemonHunterTest.DemonHunterTestCode.Relics
             {
                 PlayShopMusic();
             }
-            else
+            else if (_isShopMusicActive)
             {
-                // 숍 음악 종료 시 단순 Stop이 아닌 기본 음악까지 복원
-                if (_isShopMusicActive)
-                {
-                    CombatBgmController.RestoreDefaultMusic();
-                }
+                BgmController.Stop();
                 _isShopMusicActive = false;
             }
             return Task.CompletedTask;
@@ -62,7 +57,7 @@ namespace DemonHunterTest.DemonHunterTestCode.Relics
             _isShopMusicActive = true;
             int idx = Owner.RunState.Rng.CombatEnergyCosts.NextInt(4) + 1;  // 1..4
             string path = $"shop_doro{idx}.mp3";
-            CombatBgmController.Play(path);
+            BgmController.Play(path);
         }
     }
 }

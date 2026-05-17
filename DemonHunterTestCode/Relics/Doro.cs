@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using BaseLib.Utils;
 using DemonHunterTest.DemonHunterTestCode.Audio;
 using DemonHunterTest.DemonHunterTestCode.Character;
-using System;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.Rooms;
 using MegaCrit.Sts2.Core.Runs;
@@ -61,8 +60,7 @@ namespace DemonHunterTest.DemonHunterTestCode.Relics
                 return;
             }
             _isShopMusicActive = true;
-            var rnd = new Random();
-            int idx = rnd.Next(1, 5); // 1..4
+            int idx = Owner.RunState.Rng.CombatEnergyCosts.NextInt(4) + 1;  // 1..4
             string path = $"shop_doro{idx}.mp3";
             CombatBgmController.Play(path);
         }

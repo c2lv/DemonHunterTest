@@ -42,7 +42,8 @@ public sealed class ExpendablePerformers : DemonHunterTestCard
 
 	private static IEnumerable<CardModel> GetStatuses(Player owner)
 	{
-		return owner.PlayerCombatState.AllCards.Where((CardModel c) => c.Pile.Type == PileType.Hand);
+		ArgumentNullException.ThrowIfNull(owner.PlayerCombatState);
+		return owner.PlayerCombatState.AllCards.Where((CardModel c) => c.Pile != null && c.Pile.Type == PileType.Hand);
 	}
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

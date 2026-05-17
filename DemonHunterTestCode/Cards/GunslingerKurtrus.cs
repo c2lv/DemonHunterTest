@@ -70,7 +70,7 @@ public sealed class GunslingerKurtrus : DemonHunterTestCard
     private static IEnumerable<CardModel> GetStatuses(Player owner)
     {
         ArgumentNullException.ThrowIfNull(owner.PlayerCombatState);
-        return owner.PlayerCombatState.AllCards.Where((CardModel c) => c.Pile.Type == PileType.Draw);
+        return owner.PlayerCombatState.AllCards.Where((CardModel c) => c.Pile != null && c.Pile.Type == PileType.Draw);
     }
 
     protected override void OnUpgrade()

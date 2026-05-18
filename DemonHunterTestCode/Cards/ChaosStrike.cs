@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using BaseLib.Utils;
@@ -10,7 +9,6 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Powers;
-using MegaCrit.Sts2.Core.ValueProps;
 
 namespace DemonHunterTestCode.Cards;
 
@@ -40,6 +38,6 @@ public sealed class ChaosStrike : DemonHunterTestCard
 
 	protected override void OnUpgrade()
 	{
-		base.DynamicVars.Strength.UpgradeValueBy(3m);
+		base.DynamicVars.Strength.UpgradeValueBy(2m);
 	}
 }

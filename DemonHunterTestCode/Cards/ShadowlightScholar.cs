@@ -20,7 +20,7 @@ public sealed class ShadowlightScholar : DemonHunterTestCard
 	];
 
 	protected override IEnumerable<IHoverTip> ExtraHoverTips => [
-		HoverTipFactory.FromCard<SoulFragment>(base.IsUpgraded),
+		HoverTipFactory.FromCard<SoulFragment>(),
 		HoverTipFactory.FromKeyword(CardKeyword.Exhaust)
 	];
 
@@ -30,7 +30,6 @@ public sealed class ShadowlightScholar : DemonHunterTestCard
 	}
 
 	protected override bool IsPlayable => base.IsExhaustable;
-
 	protected override bool ShouldGlowGoldInternal => base.IsExhaustable;
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

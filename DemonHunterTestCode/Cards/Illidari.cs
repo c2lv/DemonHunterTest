@@ -17,7 +17,7 @@ using MegaCrit.Sts2.Core.Entities.Players;
 
 namespace DemonHunterTestCode.Cards;
 
-[Pool(typeof(ColorlessCardPool))]
+[Pool(typeof(TokenCardPool))]
 public sealed class Illidari : DemonHunterTestCard
 {
 	protected override IEnumerable<DynamicVar> CanonicalVars => [

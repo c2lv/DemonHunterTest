@@ -15,7 +15,7 @@ namespace DemonHunterTestCode.Cards;
 public sealed class ImmolationAura : DemonHunterTestCard
 {
 	protected override IEnumerable<DynamicVar> CanonicalVars => [
-		new DamageVar(2m, ValueProp.Move),
+		new DamageVar(4m, ValueProp.Move),
 		new RepeatVar(2)
 	];
 

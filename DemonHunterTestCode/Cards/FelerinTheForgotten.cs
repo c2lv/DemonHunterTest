@@ -25,7 +25,7 @@ public sealed class FelerinTheForgotten : DemonHunterTestCard
 	];
 
 	public FelerinTheForgotten()
-		: base(2, CardType.Skill, CardRarity.Rare, TargetType.Self)
+		: base(1, CardType.Skill, CardRarity.Rare, TargetType.Self)
 	{
 	}
 

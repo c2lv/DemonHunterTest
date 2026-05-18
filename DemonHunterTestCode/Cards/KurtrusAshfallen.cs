@@ -28,7 +28,6 @@ public sealed class KurtrusAshfallen : DemonHunterTestCard
 	];
 
 	public override IEnumerable<CardKeyword> CanonicalKeywords => [
-		CardKeyword.Ethereal,
 		DHKeyWords.Outcast,
 		CardKeyword.Exhaust
 	];

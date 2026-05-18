@@ -117,7 +117,7 @@
   "DEMONHUNTERTESTCODE-KURTRUS_ASHFALLEN.title": "쿨트러스 애쉬폴른",
   "DEMONHUNTERTESTCODE-DOOMSDAY_PREPPER.description": "[gold]불가침[/gold]을 1 얻습니다.",
   "DEMONHUNTERTESTCODE-DOOMSDAY_PREPPER.title": "심판의 날 대비자",
-  "DEMONHUNTERTESTCODE-MULTI_STRIKE.description": "이번 턴 동안\n[gold]힘[/gold]을 {StrengthPower:diff()} 얻습니다.\n다음에 사용하는 공격 카드가 2번 사용됩니다.",
+  "DEMONHUNTERTESTCODE-MULTI_STRIKE.description": "이번 턴 동안\n[gold]힘[/gold]을 {StrengthPower:diff()} 얻습니다.\n다음에 사용하는\n공격 카드가\n2번 사용됩니다.",
   "DEMONHUNTERTESTCODE-MULTI_STRIKE.title": "연속 타격",
   "DEMONHUNTERTESTCODE-BULWARK_OF_AZZINOTH.description": "내 턴 종료 시,\n내 턴 동안 받은 피해량\n만큼 [gold]방어도[/gold]를 얻습니다.",
   "DEMONHUNTERTESTCODE-BULWARK_OF_AZZINOTH.title": "아지노스의 보루 방패"

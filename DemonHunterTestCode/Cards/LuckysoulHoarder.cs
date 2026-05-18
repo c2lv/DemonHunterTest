@@ -35,7 +35,7 @@ public sealed class LuckysoulHoarder : DemonHunterTestCard
         {
             return;
         }
-        base.DynamicVars.Cards.BaseValue = Owner.RunState.Rng.CombatCardGeneration.NextInt(6); // 0..5
+        base.DynamicVars.Cards.BaseValue = Owner.RunState.Rng.CombatEnergyCosts.NextInt(6); // 0..5
         NCard.FindOnTable(this)?.UpdateVisuals(Pile?.Type ?? PileType.Hand, CardPreviewMode.Normal);
     }
 

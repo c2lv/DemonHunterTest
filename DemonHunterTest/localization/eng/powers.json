@@ -29,5 +29,21 @@
     "DEMONHUNTERTEST-IMPRISONMENT_POWER.smartDescription": "[gold]Stunned[/gold] for [blue]{Amount}[/blue] turns.",
     "DEMONHUNTERTEST-THE_SKULL_OF_GULDAN_POWER.title": "The Skull of Gul'dan",
     "DEMONHUNTERTEST-THE_SKULL_OF_GULDAN_POWER.description": "[gold]Outcast[/gold] cards cost [blue]{Amount}[/blue] less.",
-    "DEMONHUNTERTEST-THE_SKULL_OF_GULDAN_POWER.smartDescription": "[gold]Outcast[/gold] cards cost [blue]{Amount}[/blue] less."
+    "DEMONHUNTERTEST-THE_SKULL_OF_GULDAN_POWER.smartDescription": "[gold]Outcast[/gold] cards cost [blue]{Amount}[/blue] less.",
+
+    "DEMONHUNTERTEST-NETHRANDAMUS_POWER.title": "Nethrandamus",
+    "DEMONHUNTERTEST-NETHRANDAMUS_POWER.description": "At the start of your turn, discard a card.",
+    "DEMONHUNTERTEST-NETHRANDAMUS_POWER.smartDescription": "At the start of your turn, discard [blue]{Amount}[/blue] card(s).",
+
+    "DEMONHUNTERTEST-PROSECUTOR_MELTRANIX_POWER.title": "Prosecutor Meltranix",
+    "DEMONHUNTERTEST-PROSECUTOR_MELTRANIX_POWER.description": "At the start of your turn, add a random Ironclad card to your Hand.",
+    "DEMONHUNTERTEST-PROSECUTOR_MELTRANIX_POWER.smartDescription": "At the start of your turn, add [blue]{Amount}[/blue] random [gold]Ironclad[/gold] card(s) to your [gold]Hand[/gold].",
+
+    "DEMONHUNTERTEST-MULTI_STRIKE_POWER.title": "Multi-Strike",
+    "DEMONHUNTERTEST-MULTI_STRIKE_POWER.description": "The next attack card you play will be used twice.",
+    "DEMONHUNTERTEST-MULTI_STRIKE_POWER.smartDescription": "The next attack card you play will be used [blue]{Amount}[/blue] more time(s).",
+
+    "DEMONHUNTERTEST-BULWARK_OF_AZZINOTH_POWER.title": "Bulwark of Azzinoth",
+    "DEMONHUNTERTEST-BULWARK_OF_AZZINOTH_POWER.description": "At the end of your turn, gain Block equal to the damage you took this turn.",
+    "DEMONHUNTERTEST-BULWARK_OF_AZZINOTH_POWER.smartDescription": "At the end of your turn, gain [gold]Block[/gold] equal to the damage you took this turn."
 }

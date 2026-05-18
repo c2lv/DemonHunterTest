@@ -20,6 +20,10 @@ namespace DemonHunterTestCode.Cards;
 [Pool(typeof(DemonHunterTestCardPool))]
 public sealed class GoingDownSwinging : DemonHunterTestCard
 {
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [
+        CardKeyword.Exhaust,
+    ];
+
     protected override IEnumerable<DynamicVar> CanonicalVars => new List<DynamicVar>
     {
         new PowerVar<StrengthPower>(1m),

@@ -21,7 +21,6 @@ public sealed class RazorglaiveSentinel : DemonHunterTestCard
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => [
         CardKeyword.Unplayable,
-        CardKeyword.Ethereal
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new List<IHoverTip> { 
@@ -56,6 +55,6 @@ public sealed class RazorglaiveSentinel : DemonHunterTestCard
 
     protected override void OnUpgrade()
     {
-        RemoveKeyword(CardKeyword.Ethereal);
+        base.DynamicVars.Cards.UpgradeValueBy(1);
     }
 }

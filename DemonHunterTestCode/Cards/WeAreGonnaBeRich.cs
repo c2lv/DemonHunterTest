@@ -21,6 +21,10 @@ public sealed class WeAreGonnaBeRich : DemonHunterTestCard
 {
     public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
 
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [
+        CardKeyword.Exhaust,
+    ];
+
     protected override IEnumerable<DynamicVar> CanonicalVars => new List<DynamicVar>
     {
         new CardsVar(1)

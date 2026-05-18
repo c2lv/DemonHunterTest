@@ -1,35 +1,33 @@
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using BaseLib.Utils;
+using DemonHunterTest.DemonHunterTestCode.Cards;
 using DemonHunterTest.DemonHunterTestCode.Character;
+using DemonHunterTest.DemonHunterTestCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.ValueProps;
 
 namespace DemonHunterTestCode.Cards;
 
 [Pool(typeof(DemonHunterTestCardPool))]
 public sealed class BulwarkOfAzzinoth : DemonHunterTestCard
 {
-	protected override IEnumerable<DynamicVar> CanonicalVars => [
-		new BlockVar(10m, ValueProp.Move)
-	];
+	protected override IEnumerable<DynamicVar> CanonicalVars => [];
 
 	public BulwarkOfAzzinoth()
-		: base(2, CardType.Skill, CardRarity.Rare, TargetType.Self)
+		: base(3, CardType.Power, CardRarity.Rare, TargetType.Self)
 	{
 	}
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{
-        await Task.CompletedTask;
+		await PowerCmd.Apply<BulwarkOfAzzinothPower>(choiceContext, base.Owner.Creature, 1m, base.Owner.Creature, this);
 	}
 
 	protected override void OnUpgrade()
 	{
-		base.DynamicVars.Block.UpgradeValueBy(4m);
+		base.EnergyCost.UpgradeBy(-1);
 	}
 }

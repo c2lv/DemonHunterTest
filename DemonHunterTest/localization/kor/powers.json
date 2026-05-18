@@ -2,19 +2,15 @@
     "DEMONHUNTERTEST-LOSE_ENERGY_NEXT_TURN_POWER.title": "에너지 연소",
     "DEMONHUNTERTEST-LOSE_ENERGY_NEXT_TURN_POWER.description": "다음 턴에 에너지를 잃습니다.",
     "DEMONHUNTERTEST-LOSE_ENERGY_NEXT_TURN_POWER.smartDescription": "다음 턴에 에너지를 [blue]{Amount}[/blue] 잃습니다.",
-
     "DEMONHUNTERTEST-BLADESONG_POWER.title": "칼의 노래",
     "DEMONHUNTERTEST-BLADESONG_POWER.description": "내 턴 종료 시, 무작위 적에게 피해를 줍니다.",
     "DEMONHUNTERTEST-BLADESONG_POWER.smartDescription": "내 턴 종료 시, 무작위 적에게 피해를 [blue]{Amount}[/blue] 줍니다.",
-
     "DEMONHUNTERTEST-OUTCAST_TRIGGER_POWER.title": "추방자의 분노",
     "DEMONHUNTERTEST-OUTCAST_TRIGGER_POWER.description": "[gold]추방자[/gold] 카드를 사용할 때마다, 모든 적에게 피해를 줍니다.",
     "DEMONHUNTERTEST-OUTCAST_TRIGGER_POWER.smartDescription": "[gold]추방자[/gold] 카드를 사용할 때마다, 모든 적에게 피해를 [blue]{Amount}[/blue] 줍니다.",
-
     "DEMONHUNTERTEST-BLUR_DEMON_HUNTER_POWER.title": "흐릿해지기",
     "DEMONHUNTERTEST-BLUR_DEMON_HUNTER_POWER.description": "[gold]가시[/gold]의 피해를 받지 않습니다.",
-    "DEMONHUNTERTEST-BLUR_DEMON_HUNTER_POWER.smartDescription": "[blue]{Amount}[/blue]턴 동안 [gold]가시[/gold]의 피해를 받지 않습니다."
-    ,
+    "DEMONHUNTERTEST-BLUR_DEMON_HUNTER_POWER.smartDescription": "[blue]{Amount}[/blue]턴 동안 [gold]가시[/gold]의 피해를 받지 않습니다.",
     "DEMONHUNTERTEST-DOUBLE_DAMAGE_THORNS_POWER.title": "날카로운 가시",
     "DEMONHUNTERTEST-DOUBLE_DAMAGE_THORNS_POWER.description": "[gold]가시[/gold]로 받는 피해가 2배가 됩니다.",
     "DEMONHUNTERTEST-DOUBLE_DAMAGE_THORNS_POWER.smartDescription": "[blue]{Amount}[/blue]턴 동안 [gold]가시[/gold]로 받는 피해가 2배가 됩니다.",
@@ -29,5 +25,14 @@
     "DEMONHUNTERTEST-IMPRISONMENT_POWER.smartDescription": "[blue]{Amount}[/blue]턴 동안 [gold]기절[/gold]합니다.",
     "DEMONHUNTERTEST-THE_SKULL_OF_GULDAN_POWER.title": "굴단의 해골",
     "DEMONHUNTERTEST-THE_SKULL_OF_GULDAN_POWER.description": "[gold]추방자[/gold] 카드의 비용이 [blue]{Amount}[/blue] 감소합니다.",
-    "DEMONHUNTERTEST-THE_SKULL_OF_GULDAN_POWER.smartDescription": "[gold]추방자[/gold] 카드의 비용이 [blue]{Amount}[/blue] 감소합니다."
+    "DEMONHUNTERTEST-THE_SKULL_OF_GULDAN_POWER.smartDescription": "[gold]추방자[/gold] 카드의 비용이 [blue]{Amount}[/blue] 감소합니다.",
+    "DEMONHUNTERTEST-NETHRANDAMUS_POWER.title": "네스란다무스",
+    "DEMONHUNTERTEST-NETHRANDAMUS_POWER.description": "내 턴 시작 시 카드를 버립니다.",
+    "DEMONHUNTERTEST-NETHRANDAMUS_POWER.smartDescription": "내 턴 시작 시 카드를 [blue]{Amount}[/blue]장 버립니다.",
+    "DEMONHUNTERTEST-PROSECUTOR_MELTRANIX_POWER.title": "검사 멜트라닉스",
+    "DEMONHUNTERTEST-PROSECUTOR_MELTRANIX_POWER.description": "내 턴 시작 시 무작위 아이언클래드 카드를 손으로 가져옵니다.",
+    "DEMONHUNTERTEST-PROSECUTOR_MELTRANIX_POWER.smartDescription": "내 턴 시작 시 무작위 아이언클래드 카드를 [blue]{Amount}[/blue]장 [gold]손[/gold]으로 가져옵니다.",
+    "DEMONHUNTERTEST-BULWARK_OF_AZZINOTH_POWER.title": "아지노스의 보루 방패",
+    "DEMONHUNTERTEST-BULWARK_OF_AZZINOTH_POWER.description": "내 턴 종료 시 이번 턴에 받은 피해량만큼 [gold]방어도[/gold]를 얻습니다.",
+    "DEMONHUNTERTEST-BULWARK_OF_AZZINOTH_POWER.smartDescription": "내 턴 종료 시 이번 턴에 받은 피해량만큼 [gold]방어도[/gold]를 얻습니다."
 }

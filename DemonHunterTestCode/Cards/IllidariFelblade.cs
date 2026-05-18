@@ -19,6 +19,7 @@ public sealed class IllidariFelblade : DemonHunterTestCard
 {
     public override IEnumerable<CardKeyword> CanonicalKeywords => [
         DHKeyWords.Outcast,
+        CardKeyword.Exhaust,
     ];
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
@@ -28,7 +29,6 @@ public sealed class IllidariFelblade : DemonHunterTestCard
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => new List<IHoverTip>
     {
-        HoverTipFactory.FromKeyword(DHKeyWords.Outcast),
         HoverTipFactory.FromPower<IntangiblePower>()
     };
 

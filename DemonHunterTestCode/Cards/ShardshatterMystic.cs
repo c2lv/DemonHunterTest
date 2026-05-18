@@ -15,7 +15,7 @@ namespace DemonHunterTestCode.Cards;
 public sealed class ShardshatterMystic : DemonHunterTestCard
 {
 	protected override IEnumerable<DynamicVar> CanonicalVars => [
-		new DamageVar(12m, ValueProp.Move)
+		new DamageVar(9m, ValueProp.Move)
 	];
 
 	protected override IEnumerable<IHoverTip> ExtraHoverTips => [

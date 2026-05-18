@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="DemonHunterTest"
-run/main_scene="uid://uid://eack7jn086vq"
+run/main_scene="uid://eack7jn086vq"
 config/features=PackedStringArray("4.5", "C#", "Mobile")
 config/icon="res://DemonHunterTest/mod_image.png"
 

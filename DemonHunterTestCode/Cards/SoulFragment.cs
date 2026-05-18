@@ -1,12 +1,16 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.CardPools;
+using MegaCrit.Sts2.Core.Models.Cards;
 
 namespace DemonHunterTestCode.Cards;
 
@@ -25,6 +29,27 @@ public sealed class SoulFragment : DemonHunterTestCard
 	public SoulFragment()
 		: base(0, CardType.Skill, CardRarity.Token, TargetType.Self)
 	{
+	}
+
+	public static SoulFragment? FindWorstInDrawPile(Player owner)
+	{
+		ArgumentNullException.ThrowIfNull(owner, "owner");
+		return CardPile.GetCards(owner, PileType.Draw)
+			.OfType<SoulFragment>()
+			.OrderBy(card => card.Enchantment != null)
+			.ThenBy(card => card.IsUpgraded)
+			.ThenBy(card => card.CurrentUpgradeLevel)
+			.FirstOrDefault();
+	}
+
+    public static IEnumerable<SoulFragment> Create(Player owner, int amount, ICombatState combatState)
+	{
+		List<SoulFragment> list = new List<SoulFragment>();
+		for (int i = 0; i < amount; i++)
+		{
+			list.Add(combatState.CreateCard<SoulFragment>(owner));
+		}
+		return list;
 	}
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

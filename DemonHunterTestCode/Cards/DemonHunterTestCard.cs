@@ -32,4 +32,10 @@ public abstract class DemonHunterTestCard(int cost, CardType type, CardRarity ra
         CardPile.GetCards(Owner, PileType.Draw)
             .GroupBy(card => card.Id)
             .All(group => group.Count() == 1);
+
+    public bool IsExhaustable =>
+        Owner != null &&
+        CombatManager.Instance.IsInProgress &&
+        CardPile.GetCards(Owner, PileType.Draw)
+            .Any(card => card is SoulFragment);
 }

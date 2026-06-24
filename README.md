@@ -18,6 +18,7 @@ Play strategically as a character that grows stronger alongside enemies as turns
 - Illidari  
 - Outcast  
 - Highlander  
+- Soul Fragment
 
 ## How to Install the Mod
 1. Open the local folder where StS2 is installed (Windows default path: `C:\Program Files (x86)\Steam\steamapps\common\Slay the Spire 2`), and create a mods/ folder if it doesn't exist.
@@ -26,13 +27,14 @@ Play strategically as a character that grows stronger alongside enemies as turns
 4. **(Optional)** By default, save files with the MOD applied are stored separately from those without. It is recommended to also extract [UnifiedSavePath](https://www.nexusmods.com/slaythespire2/mods/6) to the mods/ folder to unify these save paths.
 
 ## In-Game Screenshots
-![character_choice](res/screenshot_1.png)
-![card_choice](res/screenshot_2.png)
-![in_combat](res/screenshot_3.png)
-![rest](res/screenshot_4.png)
-![card_library](res/screenshot_5.png)
-![potions](res/screenshot_6.png)
-![relics](res/screenshot_7.png)
+![character_choice](res/screenshot_8.png)
+![card_choice](res/screenshot_9.png)
+![in_combat](res/screenshot_15.png)
+![rest](res/screenshot_14.png)
+![card_library](res/screenshot_10.png)
+![potions](res/screenshot_11.png)
+![relics](res/screenshot_12.png)
+![merchant](res/screenshot_13.png)
 
 ## Bug Reports
 There are still many areas for improvement. Please submit pull requests or issues.

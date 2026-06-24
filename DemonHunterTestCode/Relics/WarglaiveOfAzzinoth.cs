@@ -28,13 +28,13 @@ public sealed class WarglaiveOfAzzinoth : DemonHunterTestRelic
         new PowerVar<RegenPower>(1m)
     };
 
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => new List<IHoverTip>
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => new IHoverTip[]
     {
         HoverTipFactory.FromPower<ThornsPower>(),
         HoverTipFactory.FromPower<RegenPower>()
     };
 
-    public override async Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
+    public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
         if (side == base.Owner.Creature.Side)
         {

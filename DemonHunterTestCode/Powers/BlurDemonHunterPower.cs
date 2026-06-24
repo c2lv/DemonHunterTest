@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -15,12 +17,12 @@ public sealed class BlurDemonHunterPower : DemonHunterTestPower
 
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
-	{
-		if (side == base.Owner.Side && !base.Owner.IsDead)
-		{
-			Flash();
-			await PowerCmd.Decrement(this);
-		}
-	}
+    public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
+    {
+        if (participants.Contains(base.Owner) && !base.Owner.IsDead)
+        {
+            Flash();
+            await PowerCmd.Decrement(this);
+        }
+    }
 }

@@ -13,40 +13,40 @@ namespace DemonHunterTest.DemonHunterTestCode.Powers;
 
 public sealed class BladesongPower : DemonHunterTestPower
 {
-	public override PowerType Type => PowerType.Buff;
+    public override PowerType Type => PowerType.Buff;
 
-	public override PowerStackType StackType => PowerStackType.Counter;
+    public override PowerStackType StackType => PowerStackType.Counter;
 
-	public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
-	{
-		if (side != CombatSide.Player)
-		{
-			return;
-		}
+    public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
+    {
+        if (side != CombatSide.Player)
+        {
+            return;
+        }
 
-		IReadOnlyList<Creature> hittableEnemies = base.CombatState.HittableEnemies;
-		if (hittableEnemies.Count == 0 || base.Owner.Player == null)
-		{
-			return;
-		}
+        IReadOnlyList<Creature> hittableEnemies = base.CombatState.HittableEnemies;
+        if (hittableEnemies.Count == 0 || base.Owner.Player == null)
+        {
+            return;
+        }
 
-		var runState = base.Owner.Player.RunState;
-		if (runState == null)
-		{
-			return;
-		}
+        var runState = base.Owner.Player.RunState;
+        if (runState == null)
+        {
+            return;
+        }
 
-		Creature? target = runState.Rng.CombatTargets.NextItem(hittableEnemies);
-		if (target is not null)
-		{
-			await CreatureCmd.Damage(
-				choiceContext,
-				target,
-				base.Amount,
-				ValueProp.Unpowered,
-				base.Owner,
-				null
-			);
-		}
-	}
+        Creature? target = runState.Rng.CombatTargets.NextItem(hittableEnemies);
+        if (target is not null)
+        {
+            await CreatureCmd.Damage(
+                choiceContext,
+                target,
+                base.Amount,
+                ValueProp.Unpowered,
+                base.Owner,
+                null
+            );
+        }
+    }
 }

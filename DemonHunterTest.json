@@ -4,13 +4,13 @@
   "author": "bampal2",
   "description": "Slay the Spire 2 DemonHunter MOD created from a template for use with BaseLib",
   "version": "v0.3.0",
-  "min_game_version": "v0.105.1",
+  "min_game_version": "v0.107.1",
   "has_pck": true,
   "has_dll": true,
   "dependencies": [
     {
       "id": "BaseLib",
-      "minVersion": "3.1.2"
+      "minVersion": "3.3.2"
     }
   ],
   "affects_gameplay": true

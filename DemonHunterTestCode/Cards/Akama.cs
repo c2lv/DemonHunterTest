@@ -26,7 +26,7 @@ public sealed class Akama : DemonHunterTestCard
     ];
 
     public Akama()
-        : base(3, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
+        : base(1, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
     {
     }
 

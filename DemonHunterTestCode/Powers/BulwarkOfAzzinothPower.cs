@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -15,36 +17,36 @@ namespace DemonHunterTest.DemonHunterTestCode.Powers;
 /// </summary>
 public sealed class BulwarkOfAzzinothPower : DemonHunterTestPower
 {
-	private int _damageTakenThisTurn = 0;
+    private int _damageTakenThisTurn = 0;
 
-	public override PowerType Type => PowerType.Buff;
+    public override PowerType Type => PowerType.Buff;
 
-	public override PowerStackType StackType => PowerStackType.None;
+    public override PowerStackType StackType => PowerStackType.None;
 
-	public override Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
-	{
-		if (player == base.Owner.Player)
-		{
-			_damageTakenThisTurn = 0;
-		}
-		return Task.CompletedTask;
-	}
+    public override Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
+    {
+        if (player == base.Owner.Player)
+        {
+            _damageTakenThisTurn = 0;
+        }
+        return Task.CompletedTask;
+    }
 
-	public override Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props, Creature? dealer, CardModel? cardSource)
-	{
-		if (target == base.Owner && result.UnblockedDamage > 0)
-		{
-			_damageTakenThisTurn += result.UnblockedDamage;
-		}
-		return Task.CompletedTask;
-	}
+    public override Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props, Creature? dealer, CardModel? cardSource)
+    {
+        if (target == base.Owner && result.UnblockedDamage > 0)
+        {
+            _damageTakenThisTurn += result.UnblockedDamage;
+        }
+        return Task.CompletedTask;
+    }
 
-	public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
-	{
-		if (side == base.Owner.Side && _damageTakenThisTurn > 0)
-		{
-			Flash();
-			await CreatureCmd.GainBlock(base.Owner, _damageTakenThisTurn, ValueProp.Move, null);
-		}
-	}
+    public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
+    {
+        if (participants.Contains(base.Owner) && _damageTakenThisTurn > 0)
+        {
+            Flash();
+            await CreatureCmd.GainBlock(base.Owner, _damageTakenThisTurn, ValueProp.Move, null);
+        }
+    }
 }

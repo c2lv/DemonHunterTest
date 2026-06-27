@@ -42,6 +42,10 @@ There are still many areas for improvement. Please submit pull requests or issue
 ## Supported Languages
 English, Korean
 
+## Link
+[Steam Community](https://steamcommunity.com/sharedfiles/filedetails/?id=3751176657)
+[Nexusmods](https://www.nexusmods.com/slaythespire2/mods/853)
+
 ## Other
 The developer of this service has no relation to the developers of World of Warcraft or Hearthstone.
 All resources used in the game are owned by Blizzard Entertainment.

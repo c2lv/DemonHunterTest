@@ -40,7 +40,7 @@ Play strategically as a character that grows stronger alongside enemies as turns
 There are still many areas for improvement. Please submit pull requests or issues.
 
 ## Supported Languages
-English, Korean
+English, Korean, Chinese
 
 ## Link
 [Steam Community](https://steamcommunity.com/sharedfiles/filedetails/?id=3751176657)

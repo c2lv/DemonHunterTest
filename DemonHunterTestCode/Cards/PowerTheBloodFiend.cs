@@ -9,6 +9,8 @@ namespace DemonHunterTestCode.Cards;
 
 public sealed class PowerTheBloodFiend : DemonHunterTestCard
 {
+    public override bool CanBeGeneratedInCombat => false;
+
     protected override IEnumerable<DynamicVar> CanonicalVars => [];
 
     public PowerTheBloodFiend()

@@ -1,7 +1,7 @@
 {
-  "DEMONHUNTERTEST-OUTCAST.title": "弃儿",
-  "DEMONHUNTERTEST-OUTCAST.description": "只能从手牌最左侧或最右侧的位置使用。",
-  "DEMONHUNTERTEST-HIGHLANDER.title": "孤品",
+  "DEMONHUNTERTEST-OUTCAST.title": "流放",
+  "DEMONHUNTERTEST-OUTCAST.description": "在手牌中的最左侧和最右侧时才能使用",
+  "DEMONHUNTERTEST-HIGHLANDER.title": "宇宙",
   "DEMONHUNTERTEST-HIGHLANDER.description": "只能在你的抽牌堆中没有重复卡牌时使用。",
   "DEMONHUNTERTEST-TAUNT.title": "嘲讽",
   "DEMONHUNTERTEST-TAUNT.description": "若此牌在你的手牌中，必须先使用它，才能使用其他卡牌。"
